@@ -1,5 +1,4 @@
 export function PostIndex(props) {
-  console.log(props.posts);
   return (
     <div id="posts-index">
       <h2>All Posts</h2>
@@ -7,8 +6,8 @@ export function PostIndex(props) {
         <div key={post.id} className="posts">
           <h2>{post.title}</h2>
           <img src={post.image} alt="" />
-          <p>Body: {post.body}</p>
-          <button>More Info</button>
+          <p> {post.body}</p>
+          <button onClick={() => props.onSelectPost(post)}>More Info</button>
         </div>
       ))}
     </div>
