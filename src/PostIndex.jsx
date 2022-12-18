@@ -1,4 +1,14 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 export function PostIndex(props) {
+  const handleIndexPosts = () => {
+    axios.get("http://localhost:3000/posts.json").then((response) => {
+      console.log(response.data);
+      setPosts(response.data);
+    });
+  };
+  useEffect(handleIndexPosts, []);
   return (
     <div id="posts-index">
       <h2>All Posts</h2>

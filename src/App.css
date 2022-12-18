@@ -1,5 +1,6 @@
 #posts-index img {
-  width: 300px;
+  max-width: 50%;
+  height: auto;
 }
 
 html {
